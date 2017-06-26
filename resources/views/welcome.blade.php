@@ -10,6 +10,8 @@
 <meta name="author" content="pixelcave">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
 <link rel="stylesheet" id="css-main" href="assets/css/oneui.css">
 </head>
