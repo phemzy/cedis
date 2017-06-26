@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::post('subscribe', function(){
+	validate(request(), [
+		'email' => 'required|email',
+	]);
+	
+	$sub = new App\Subscriber;
+	$sub->email = request('email');
+	$sub->save();
+	session()->flash('success', 'Thanks For Subscribing');
+
+	return back();
+});
