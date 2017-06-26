@@ -6,12 +6,12 @@
 <meta charset="utf-8">
 
 <title>Crypto2Cedis</title>
-  <meta name="description" content="Crypto2Naira is a platform dedicated specifically towards the conversion of cryptocurrencies to the Nigerian 'naira'. It achieves that through a recurrent mutual obligation between registered members.">
+  <meta name="description" content="Crypto2Cedis is a platform dedicated specifically towards the conversion of cryptocurrencies to the Ghanaian 'cedis'. It achieves that through a recurrent mutual obligation between registered members.">
 
-    <meta name="description" content="Sell you TBC here on Crypto2Naira. We allow you exchange your TBC for naira all free of charge.">
-    <meta name="description" content="Sell your Greycoin GRC on Crypto2Naira without any stress.">
+    <meta name="description" content="Sell you TBC here on Crypto2Cedis. We allow you exchange your TBC for cedis all free of charge.">
+    <meta name="description" content="Sell your TBC on Crypto2Cedis without any stress.">
 
-    <meta name="keywords" content="TBC, GRC, Cryptocurrencies, Sell TBC, Sell GRC, Convert TBC to Naira, Convert GRC to naira, Convert cryptocurrency to naira, How to sell TBC in naira, How to convert TBC to  naira, Convert GRC to naira, The Billion Coin, Greycoin, Sell The Billion Coin, Sell Greycoin" />
+    <meta name="keywords" content="TBC, Cryptocurrencies, Sell TBC, Sell GRC, Convert TBC to Cedis, Convert cryptocurrency to cedis, How to sell TBC in cedis, How to convert TBC to cedis, Convert GRC to naira, The Billion Coin, Greycoin, Sell The Billion Coin, Sell Greycoin" />
 
     <meta name="robots" content="index,follow" />
 
@@ -21,8 +21,8 @@
 
     <meta property="og:url" content="{{ url('/') }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Crypto2Naira" />
-    <meta property="og:description" content="Crypto2Naira is a platform dedicated specifically towards the conversion of cryptocurrencies to the Nigerian 'naira'. It achieves that through a recurrent mutual obligation between registered members." />
+    <meta property="og:title" content="Crypto2Cedis" />
+    <meta property="og:description" content="Crypto2Cedis is a platform dedicated specifically towards the conversion of cryptocurrencies to the Ghanaian 'cedis'. It achieves that through a recurrent mutual obligation between registered members." />
     <meta property="og:image" content="{{ URL::to('img/logo_big.png') }}" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
