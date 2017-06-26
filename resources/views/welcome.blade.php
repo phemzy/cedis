@@ -43,7 +43,7 @@
 <div class="input-group input-group-lg">
 <input class="form-control" type="text" placeholder="Enter email" name="email">
 <div class="input-group-btn">
-<button class="btn btn-default"><i class="fa fa-search"></i></button>
+<button class="btn btn-default">SEND <i class="fa fa-space-shuttle"></i></button>
 </div>
 </div>
 <div>
