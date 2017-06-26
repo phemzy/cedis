@@ -26,7 +26,8 @@
 <div class="form-group">
 <div class="col-sm-6 col-sm-offset-3">
 <div class="input-group input-group-lg">
-<input class="form-control" type="text" placeholder="Enter email">
+<label>Enter your email to subscribe: </label>
+<input class="form-control" type="text" placeholder="Enter email" name="email">
 <div class="input-group-btn">
 <button class="btn btn-default"><i class="fa fa-search"></i></button>
 @if(count($errors))

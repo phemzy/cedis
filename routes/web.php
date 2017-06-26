@@ -15,9 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::name('subscribe')->post('subscribe', function(){
-	\Validator::make(request()->all(), [
+	$validator = Validator::make(request()->all(), [
 		'email' => 'required|email',
 	]);
+
+	if ($validator->fails()) {
+        return redirect('/')
+        	->withErrors($validator)
+            ->withInput();
+    }
 
 	$sub = new App\Subscriber;
 	$sub->email = request('email');
