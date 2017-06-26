@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::name('subscribe')->post('subscribe', function(){
-	\Validator::make(request(), [
+	\Validator::make(request()->all(), [
 		'email' => 'required|email',
 	]);
 
