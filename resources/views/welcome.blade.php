@@ -19,8 +19,8 @@
 <div class="row">
 <div class="col-sm-6 col-sm-offset-3">
 <h1 class="font-s128 font-w300 text-smooth animated rollIn">Hi</h1>
-<h2 class="h3 font-w300 push-50 animated fadeInUp">We are launching soon!</h2>
-<h2><small>Enter your email to subscribe:</small></h2>
+<h2 class="h3 font-w300 push-10 animated fadeInUp">We are launching soon!</h2>
+<h2 class="h3 font-w300 push-20 animated fadeInDown"><small>Enter your email to subscribe:</small></h2>
 <form class="form-horizontal push-50" action="{{ route('subscribe') }}" method="post">
 {{ csrf_field() }}
 <div class="form-group">
@@ -29,15 +29,17 @@
 <input class="form-control" type="text" placeholder="Enter email" name="email">
 <div class="input-group-btn">
 <button class="btn btn-default"><i class="fa fa-search"></i></button>
-@if(count($errors))
-    @foreach($errors->all() as $e)
-        <span class="help-block">{{ $e }}</span>
-    @endforeach
-@endif
-@if(session()->has('success'))
-    <span class="label label-primary">{{ session()->get('success') }}</span>
-@endif
 </div>
+</div>
+<div>
+	@if(count($errors))
+	    @foreach($errors->all() as $e)
+	        <span class="help">{{ $e }}</span>
+	    @endforeach
+	@endif
+	@if(session()->has('success'))
+	    <span class="label label-primary">{{ session()->get('success') }}</span>
+	@endif
 </div>
 </div>
 </div>
