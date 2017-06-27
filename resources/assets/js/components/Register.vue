@@ -100,6 +100,8 @@
 
                     axios.post('register', formdata).then( (resp) => {
                         this.submitted = false
+                        console.log(resp)
+                        return
 
                         if(resp.data == 'registered'){
                             return location.href = '/next-step'
