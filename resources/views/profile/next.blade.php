@@ -25,7 +25,7 @@
 		<div class="row">
 			<div class="col-xs-12 col-md-8 col-md-offset-2">
 				<div class="text-center">
-		            <img src="img/logo1.png" alt="">
+		            <img src="img/image.jpg" alt="">
 		            <h4 class="text-muted lead push-15-t">Hi! Just one more thing..</h4>
 		        </div>
 				<div class="">
