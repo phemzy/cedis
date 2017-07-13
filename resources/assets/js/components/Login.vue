@@ -36,7 +36,7 @@
         </div>
         <div class="form-group push-30-t">
             <div class="col-xs-12">
-                <button class="btn btn-sm btn-block btn-primary" type="submit" @click.prevent="login">Log in <i class="fa fa-check fa-spin"></i></button>
+                <button class="btn btn-sm btn-block btn-primary" type="submit" @click.prevent="login">Log in <i class="":class="{'fa-spin fa fa-spinner' : login_submit}"></i></button>
             </div>
         </div>
     </form>
@@ -54,20 +54,25 @@
             return {
                 email: '',
                 password: '',
-                err: {}
+                err: {},
+                login_submit: false
             }
         },
 
         methods: {
             login(){
                 if(this.email != '' && this.password != ''){
+                    this.login_submit = true
                     let formdata = new FormData()
 
                     formdata.append('email', this.email)
                     formdata.append('password', this.password)
                     axios.post('login', formdata).then( (resp) => {
                         return location.href = '/home'
+                        this.login_submit = false
                     }).catch( (error) => {
+                        console.log(error)
+                        this.login_submit = false
                         this.err = error.response.data
                     })
                 }else
