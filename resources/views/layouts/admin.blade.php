@@ -509,7 +509,11 @@
                                             <a href="">View Subscribers</a>
                                         </li>
                                         <li>
+<<<<<<< HEAD
+                                            <a href="{{ route('subsciber.mail.all') }}">Mail Subscribers</a>
+=======
                                             <a href="">Mail Subscribers</a>
+>>>>>>> 3437561e08c1bf919a29226aa24cf6ead4655f09
                                         </li>
                                     </ul>
                                 </li>

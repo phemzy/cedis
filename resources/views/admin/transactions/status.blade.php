@@ -24,9 +24,13 @@
                             <th>Date Created</th>
                             <th>Status</th>
                             @if($status == 'matched')
+<<<<<<< HEAD
+                            	<th>Matcher</th>
+=======
                                 <th>Date Matched</th>
                             	<th>Matcher</th>
 
+>>>>>>> 3437561e08c1bf919a29226aa24cf6ead4655f09
                             @endif
                             <th class="text-center">Action</th>
                         </tr>
@@ -53,12 +57,19 @@
                             <td class="">
                                 <strong>&#8358;{{ $t->package->amount }}</strong>
                             </td>
+<<<<<<< HEAD
+                            <td class="">{{ date('Y/m/d', strtotime($t->created_at)) }}</td>
+=======
                             <td class="">{{ date('D M jS, Y g:ia', strtotime($t->created_at))  }}</td>
+>>>>>>> 3437561e08c1bf919a29226aa24cf6ead4655f09
                             <td>
                                 <span class="label label-danger">{{ $t->status }}</span>
                             </td>
                             @if($status == 'matched')
+<<<<<<< HEAD
+=======
                                 <td>{{ date('D M jS, Y g:ia', strtotime($t->matched_at ?: $t->updated_at))  }}</td>
+>>>>>>> 3437561e08c1bf919a29226aa24cf6ead4655f09
                             	<td><button class="btn btn-default" data-toggle="modal" data-target="#{{ $t->transaction_id }}" type="button"> Matched User </button></td>
                             	<div class="modal fade" id="{{ $t->transaction_id }}" tabindex="-1" role="dialog" aria-hidden="true">
 									<div class="modal-dialog modal-dialog-popin">
@@ -158,6 +169,27 @@
                                     <li class="dropdown">
                                         <button type="button" data-toggle="dropdown" class="btn btn-info"> <span class="caret"></span></button>
                                         <ul class="dropdown-menu dropdown-menu-right">
+<<<<<<< HEAD
+                                            <li>
+                                                @if($t->isMatched())
+                                                    <a href="">Unmatch</a>
+                                                @else
+                                                    <a href="">Match</a>
+                                                @endif
+                                            </li>
+                                            <li>
+                                                @if($t->hasFailed())
+                                                    <a href="">Block Due to Failed</a>
+                                                @else
+                                                    <a href="">Block User</a>
+                                                @endif
+                                            </li>
+                                            <li>
+                                                <a href="">Reset</a>
+                                            </li>
+                                            <li>
+                                            <a href="">Delete</a>
+=======
                                             @if($t->isMatched())
                                             <li>
                                                 <a href="{{ route('unmatch', $t->id) }}" onclick="event.preventDefault();document.getElementById('{{ $t->id }}').submit()">Unmatch</a>
@@ -173,6 +205,7 @@
                                             </li>
                                             <li>
                                             <a href="{{ route('delete.transaction', $t->id) }}">Delete</a>
+>>>>>>> 3437561e08c1bf919a29226aa24cf6ead4655f09
                                             </li>
                                             <li><a href="">Mail User</a></li>
                                             <li><a href="">View</a></li>
