@@ -2,11 +2,20 @@
 
 namespace App\Http\Controllers\Admin;
 
+<<<<<<< HEAD
+=======
+use App\Notifications\TransactionReset;
+use App\Notifications\FailedTransaction;
+>>>>>>> 3437561e08c1bf919a29226aa24cf6ead4655f09
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Transaction;
 use App\Market;
 use Auth;
+<<<<<<< HEAD
+=======
+use DateTime;
+>>>>>>> 3437561e08c1bf919a29226aa24cf6ead4655f09
 
 class TransactionController extends Controller
 {
@@ -156,4 +165,30 @@ class TransactionController extends Controller
             return back();
     }
 
+<<<<<<< HEAD
+=======
+    public function unmatch(Transaction $transaction)
+    {
+        $matched_transaction = $transaction->matched_transaction;
+        $recipient = $transaction->recipient();
+
+        $transaction->update(['transaction_id' => null, 'recipient_id' => null, 'status' => 'pending']);
+        $matched_transaction->update(['transaction_id' => null, 'recipient_id' => null, 'status' => 'failed']);
+
+        $transaction->user->notify(new TransactionReset($transaction->user, $transaction));
+        $matched_transaction->user->notify(new FailedTransaction($matched_transaction->user, $matched_transaction));
+
+        session()->flash('success', 'Transaction unmatched');
+
+        return back();
+    }
+
+    public function deleteTransaction(Transaction $transaction)
+    {
+        $transaction->delete();
+
+        return back();
+    }
+
+>>>>>>> 3437561e08c1bf919a29226aa24cf6ead4655f09
 }
