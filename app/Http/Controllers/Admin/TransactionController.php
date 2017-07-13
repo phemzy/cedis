@@ -2,20 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
-<<<<<<< HEAD
-=======
 use App\Notifications\TransactionReset;
 use App\Notifications\FailedTransaction;
->>>>>>> 3437561e08c1bf919a29226aa24cf6ead4655f09
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Transaction;
 use App\Market;
 use Auth;
-<<<<<<< HEAD
-=======
 use DateTime;
->>>>>>> 3437561e08c1bf919a29226aa24cf6ead4655f09
 
 class TransactionController extends Controller
 {
@@ -165,8 +159,7 @@ class TransactionController extends Controller
             return back();
     }
 
-<<<<<<< HEAD
-=======
+
     public function unmatch(Transaction $transaction)
     {
         $matched_transaction = $transaction->matched_transaction;
@@ -190,5 +183,4 @@ class TransactionController extends Controller
         return back();
     }
 
->>>>>>> 3437561e08c1bf919a29226aa24cf6ead4655f09
 }
