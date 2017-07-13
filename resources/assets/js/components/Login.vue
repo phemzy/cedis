@@ -36,7 +36,7 @@
         </div>
         <div class="form-group push-30-t">
             <div class="col-xs-12">
-                <button class="btn btn-sm btn-block btn-primary" type="submit" @click.prevent="login">Log in <i class="fa fa-check"></i></button>
+                <button class="btn btn-sm btn-block btn-primary" type="submit" @click.prevent="login">Log in <i class="fa fa-check fa-spin"></i></button>
             </div>
         </div>
     </form>

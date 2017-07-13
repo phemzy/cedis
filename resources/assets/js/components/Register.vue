@@ -95,7 +95,7 @@
                     formdata.append('email', this.email)
                     formdata.append('password', this.password)
                     formdata.append('password_confirmation', this.password_confirmation)
-                    formdata.append('token', this.token)
+                    formdata.append('_token', this.token)
                     formdata.append('tnc', this.tnc)
 
                     axios.post('register', formdata).then( (resp) => {
