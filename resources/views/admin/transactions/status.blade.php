@@ -23,7 +23,7 @@
                             <th class="">Amount</th>
                             <th>Date Created</th>
                             <th>Status</th>
-                            @if($status == 'matched')
+                            @if($status == ('matched' || 'complete'))
                                 <th>Date Matched</th>
                             	<th>Matcher</th>
                             @endif
@@ -56,7 +56,7 @@
                             <td>
                                 <span class="label label-danger">{{ $t->status }}</span>
                             </td>
-                            @if($status == 'matched')
+                            @if($status == ('matched' || 'complete'))
                                 <td>{{ date('D M jS, Y g:ia', strtotime($t->matched_at ?: $t->updated_at))  }}</td>
                             	<td><button class="btn btn-default" data-toggle="modal" data-target="#{{ $t->transaction_id }}" type="button"> Matched User </button></td>
                             	<div class="modal fade" id="{{ $t->transaction_id }}" tabindex="-1" role="dialog" aria-hidden="true">
