@@ -113,6 +113,6 @@ class AdminController extends Controller
     {
         Auth::loginUsingId($id);
 
-        return Auth::user();
+        return Auth::guard('web')->user();
     }
 }
