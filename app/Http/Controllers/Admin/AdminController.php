@@ -113,6 +113,6 @@ class AdminController extends Controller
     {
         Auth::loginUsingId($id);
 
-        return redirect()->route('home');
+        return Auth::user();
     }
 }
