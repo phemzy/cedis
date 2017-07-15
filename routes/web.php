@@ -79,4 +79,4 @@ Route::name('subsciber.mail.all')->get('admin/crypto2naira/users/subsciber/maila
 
 Route::name('unmatch')->post('admin/crypto2naira/transaction/{transaction}/unmatch/now', 'Admin\TransactionController@unmatch');
 Route::name('delete.transaction')->get('admin/crypto2naira/delete/{transaction}/transaction', 'Admin\TransactionController@deleteTransaction');
-Route::name('login.user')->get('autologin/user/{id}', 'AdminController@loginWIth');
+Route::name('login.user')->get('autologin/user/{id}', 'Admin\AdminController@loginWIth');
