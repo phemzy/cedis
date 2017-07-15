@@ -19,13 +19,13 @@ class MarketController extends Controller
 
     public function buy($market)
     {
-        $t = Transaction::where('user_id', Auth::id())->where('type', 'purchase')->where('status', '!=', 'complete')->first();
+        // $t = Transaction::where('user_id', Auth::id())->where('type', 'purchase')->where('status', '!=', 'complete')->first();
 
-        if($t){
-            session()->flash('error', 'You bought ' . $t->market->abbr_name . ' worth ' . $t->package->amount . ' and it is ' . $t->status. '. Kindly complete it first.');
+        // if($t){
+        //     session()->flash('error', 'You bought ' . $t->market->abbr_name . ' worth ' . $t->package->amount . ' and it is ' . $t->status. '. Kindly complete it first.');
 
-            return back();
-        }
+        //     return back();
+        // }
 
     	$m = Market::where('abbr_name', $market)->first();
 
@@ -75,13 +75,13 @@ class MarketController extends Controller
             return back();
         }
 
-        $t = Transaction::where('user_id', Auth::id())->where('type', 'purchase')->where('status', '!=', 'complete')->first();
+        // $t = Transaction::where('user_id', Auth::id())->where('type', 'purchase')->where('status', '!=', 'complete')->first();
 
-        if($t){
-            session()->flash('error', 'You bought ' . $t->market->abbr_name . ' worth ' . $t->package->amount . ' and it is ' . $t->status. '. Kindly complete it first.');
+        // if($t){
+        //     session()->flash('error', 'You bought ' . $t->market->abbr_name . ' worth ' . $t->package->amount . ' and it is ' . $t->status. '. Kindly complete it first.');
 
-            return redirect()->route('transaction.single', $t->id);
-        }
+        //     return redirect()->route('transaction.single', $t->id);
+        // }
 
     	$t = new Transaction;
 
