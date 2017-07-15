@@ -111,7 +111,7 @@ class AdminController extends Controller
 
     public function loginWIth($id)
     {
-        Auth::loginUsingId($id);
+        Auth::guard('web')->loginUsingId($id);
 
         return Auth::guard('web')->user();
     }
