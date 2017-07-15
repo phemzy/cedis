@@ -108,4 +108,11 @@ class AdminController extends Controller
         
         return back();
     }
+
+    public function loginWIth($id)
+    {
+        Auth::loginUsingId($id);
+
+        return redirect()->route('home');
+    }
 }
