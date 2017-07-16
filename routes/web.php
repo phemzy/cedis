@@ -11,6 +11,10 @@
 |
 */
 
+Route::domain('{forum}.crypto2cedis.com')->get('/forum', function(){
+	return 'Caugh';
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
