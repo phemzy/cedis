@@ -11,12 +11,6 @@
 |
 */
 
-Route::domain('{forum}.crypto2cedis.com')->group(function(){
-	Route::get('/forum', function(){
-		return 'Caugh';
-	});
-});
-
 Route::get('/', function () {
     return view('welcome');
 });
